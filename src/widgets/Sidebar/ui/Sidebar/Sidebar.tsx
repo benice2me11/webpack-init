@@ -35,33 +35,29 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 size={ButtonSize.L}
                 square
             >
-                {collapsed ? '>' : '<' }
+                {collapsed ? '>' : '<'}
             </Button>
             <div className={cls.items}>
-                <div>
-                    <AppLink
-                        theme={AppLinkTheme.SECONDARY}
-                        to={RoutePath.main}
-                        className={cls.item}
-                    >
-                        <MainIcon className={cls.icon} />
-                        <span className={cls.link}>
-                            {t('Главная')}
-                        </span>
-                    </AppLink>
-                </div>
-                <div>
-                    <AppLink
-                        theme={AppLinkTheme.SECONDARY}
-                        to={RoutePath.about}
-                        className={cls.item}
-                    >
-                        <AboutIcon className={cls.icon} />
-                        <span className={cls.link}>
-                            {t('О сайте')}
-                        </span>
-                    </AppLink>
-                </div>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    to={RoutePath.main}
+                    className={cls.item}
+                >
+                    <MainIcon className={cls.icon} />
+                    <span className={cls.link}>
+                        {t('Главная')}
+                    </span>
+                </AppLink>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    to={RoutePath.about}
+                    className={cls.item}
+                >
+                    <AboutIcon className={cls.icon} />
+                    <span className={cls.link}>
+                        {t('О сайте')}
+                    </span>
+                </AppLink>
             </div>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
